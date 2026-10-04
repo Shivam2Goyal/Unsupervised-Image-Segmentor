@@ -24,9 +24,29 @@ This project implements image segmentation using **Gaussian Mixture Models (GMM)
 | ![Input](input/elephant.jpg) | ![Output](output/elephant_output.png) |
 | ![Input](input/eiffel.jpeg) | ![Output](output/eiffel_output.png) |
 
+> The output images are produced by the web engine (`web/`) with 7 regions and a 25% texture weight;
+> regenerate them with `cd web && npm install && node scripts/make-readme-outputs.mjs`.
+
 ---
 
-## ⚙️ Setup Instructions
+## 🌐 Web app
+
+`web/` contains a browser version (React + Vite) that runs the same pipeline entirely client-side, so it can be hosted as static files (e.g. on Vercel) with no server and no cold start.
+
+- Upload an image or take a picture with your camera, press **Segment**, compare original and segmented side by side, and download the result.
+- Adjustable number of regions and texture (LBP) weight.
+- A "How it works" page walks through every stage with diagrams and interactive demos.
+
+```bash
+cd web
+npm install
+npm run dev      # development server
+npm run build    # production build in web/dist
+```
+
+---
+
+## ⚙️ Setup Instructions (Python)
 
 ### 1. Clone the repository
 

@@ -10,6 +10,9 @@ __pycache__/
 # Scratch output written by src/main.py
 output/16.png
 
+# Screenshots used for debugging with Claude Code - local only
+reference/
+
 # OS / editor
 .DS_Store
 Thumbs.db
