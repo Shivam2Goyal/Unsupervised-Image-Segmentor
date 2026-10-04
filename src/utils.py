@@ -129,11 +129,14 @@ def createData(image, n_samples):
 		radius, method="uniform")
 
 	lbp=np.reshape(lbp,(n_samples,1))
+	# "uniform" LBP codes run 0..numPoints+1; stretch them to the 0-255 range of L, a, b
+	# so that texture is not drowned out by the colour channels after normalisation
+	lbp=lbp*(255.0/(numPoints+1))
 
 	imtest= np.reshape(imtest, (n_samples, d))
 	data=np.column_stack((imtest, lbp))
 
-	data= preprocessing.normalize(imtest, norm= 'l2')
+	data= preprocessing.normalize(data, norm= 'l2')
 	#data= preprocessing.scale(data);
 
 	return data, imtest

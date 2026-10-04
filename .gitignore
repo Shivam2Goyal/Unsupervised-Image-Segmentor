@@ -1,0 +1,17 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Created by run.sh / run.bat
+.pip_upgraded
+.req_hash
+
+# Scratch output written by src/main.py
+output/16.png
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

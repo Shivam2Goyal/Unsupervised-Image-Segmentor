@@ -41,3 +41,11 @@ cd gmm-segmentation
 chmod +x run.sh
 ./run.sh
 ```
+
+**Windows (cmd or PowerShell):**
+
+```bat
+.\run.bat input\cat.jpeg
+```
+(In PowerShell the `.\` prefix is required; in cmd it is optional.)
+(Requires Python 3.10+. With no argument it uses `input\eiffel.jpeg`.)
